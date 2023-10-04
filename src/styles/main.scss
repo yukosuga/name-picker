@@ -1,12 +1,35 @@
-// @import "base";
-// You need the base only when you are not using bootstrap. In that case, go to _base.scss
-// to customize it as you may want.
-
-@import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Write your sass code here or import partials
-
 h1 {
+  font-family: "Gaegu", cursive;
+  font-size: 60px;
   color: tomato;
+  margin: 50px auto;
+  text-align: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  img {
+    width: 350px;
+    margin: auto;
+  }
+
+  #displayedName {
+    font-family: "Gaegu", cursive;
+    font-size: 50px;
+    color: tomato;
+    text-align: center;
+  }
+
+  #pickNameButton {
+    font-size: 25px;
+    width: 200px;
+    margin: 80px auto 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: white;
+  }
 }
