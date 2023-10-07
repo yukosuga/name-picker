@@ -1,10 +1,21 @@
 "use strict";
 
 const nameList = ["Leon", "Emily", "Mischa", "Thomas", "Clara", "Michael", "Sophia", "Charley", "Mario", "Cathy"];
+const maxRandom = nameList.length - 2
 
 const namePicker = () => {
-    const randomIndex = Math.floor(Math.random() * nameList.length);
-    const randomName = nameList[randomIndex];
+    // Select any name at random.. except the last
+    const randomIndex = Math.floor(Math.random() * maxRandom);
+
+    // Remove the name from the array...
+    const randomName = nameList.splice(randomIndex, 1)[0];
+
+    // ... and place it at the end, so that it can't be selected
+    // for the next two calls
+    nameList.push(randomName)
+
+    // console.log("nameList:", nameList);
+
     return randomName;
 }
 
