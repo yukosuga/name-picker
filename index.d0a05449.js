@@ -1,2 +1,0 @@
-"use strict";const nameList=["Leon","Emily","Mischa","Thomas","Clara","Michael","Sophia","Charley","Mario","Cathy"],namePicker=()=>{const e=Math.floor(Math.random()*nameList.length);return nameList[e]},handleButtonClick=()=>{const e=namePicker();console.log(e),document.getElementById("displayedName").textContent=e};document.getElementById("pickNameButton").addEventListener("click",handleButtonClick);
-//# sourceMappingURL=index.d0a05449.js.map

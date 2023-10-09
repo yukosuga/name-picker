@@ -1,0 +1,2 @@
+"use strict";const nameList=["Leon","Emily","Chole","Thomas","Clara","Michael","Sophia","Charley","Mario","Cathy"],copyNameList=[...nameList],namePicker=()=>{0===copyNameList.length&&copyNameList.push(...nameList);const e=Math.floor(Math.random()*copyNameList.length),t=copyNameList[e];return copyNameList.splice(e,1),t},handleButtonClick=()=>{const e=namePicker();console.log(e),document.getElementById("displayedName").textContent=e};document.getElementById("pickNameButton").addEventListener("click",handleButtonClick);
+//# sourceMappingURL=index.68306b57.js.map
