@@ -1,17 +1,35 @@
 "use strict";
 
-const nameList = ["Leon", "Emily", "Mischa", "Thomas", "Clara", "Michael", "Sophia", "Charley", "Mario", "Cathy"];
+const nameList = [
+  "Leon",
+  "Emily",
+  "Chole",
+  "Thomas",
+  "Clara",
+  "Michael",
+  "Sophia",
+  "Charley",
+  "Mario",
+  "Cathy",
+];
+const copyNameList = [...nameList];
 
 const namePicker = () => {
-    const randomIndex = Math.floor(Math.random() * nameList.length);
-    const randomName = nameList[randomIndex];
-    return randomName;
-}
+  if (copyNameList.length === 0) {
+    copyNameList.push(...nameList);
+  }
+  const randomIndex = Math.floor(Math.random() * copyNameList.length);
+  const randomName = copyNameList[randomIndex];
+  copyNameList.splice(randomIndex, 1);
+  return randomName;
+};
 
 const handleButtonClick = () => {
-    const selectedName = namePicker();
-    console.log(selectedName);
-    document.getElementById("displayedName").textContent = selectedName;
-}
+  const selectedName = namePicker();
+  console.log(selectedName);
+  document.getElementById("displayedName").textContent = selectedName;
+};
 
-document.getElementById("pickNameButton").addEventListener("click", handleButtonClick);
+document
+  .getElementById("pickNameButton")
+  .addEventListener("click", handleButtonClick);
